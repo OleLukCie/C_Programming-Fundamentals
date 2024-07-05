@@ -1,0 +1,12 @@
+#include <windows.h>
+#include <mmsystem.h>
+#pragma comment(lib, "winmm.lib")
+
+//main
+int main() {
+	//mci: media control interface
+	mciSendString(L"open hourglass.mp3", 0, 0, 0);
+	mciSendString(L"play hourglass.mp3", 0, 0, 0);
+	system("pause");
+	return 0;
+}
